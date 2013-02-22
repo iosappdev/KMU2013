@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="KMUViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-wh-mEm">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStart:" destination="2" eventType="touchUpInside" id="rft-MO-Dh1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uZP-xH-rrY">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueM-Vz-AXR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStop:" destination="2" eventType="touchUpInside" id="6VZ-EX-dim"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-Rw-N7S"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Accuracy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlm-1b-tEj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wyt-Mz-czx">
+                                <segments>
+                                    <segment title="10M"/>
+                                    <segment title="100M"/>
+                                    <segment title="1KM"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Current Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJC-q3-gAE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="263" id="xll-Fq-oPU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.056467890739999999" green="0.59045755860000004" blue="0.60887098309999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="OJC-q3-gAE" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="9xk-rw-IM4"/>
+                            <constraint firstItem="aPY-wh-mEm" firstAttribute="top" secondItem="3" secondAttribute="top" constant="180" id="AXl-EA-iJx"/>
+                            <constraint firstAttribute="trailing" secondItem="ueM-Vz-AXR" secondAttribute="trailing" constant="82" id="BIC-HW-LYN"/>
+                            <constraint firstItem="aPY-wh-mEm" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="82" id="CHd-Mc-Qx9"/>
+                            <constraint firstItem="Nlm-1b-tEj" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ft5-yw-mx3"/>
+                            <constraint firstAttribute="trailing" secondItem="wyt-Mz-czx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rdn-kr-Dfc"/>
+                            <constraint firstItem="uZP-xH-rrY" firstAttribute="top" secondItem="hX5-Rw-N7S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yec-AP-WbF"/>
+                            <constraint firstItem="wyt-Mz-czx" firstAttribute="top" secondItem="Nlm-1b-tEj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cMB-qK-NRf"/>
+                            <constraint firstItem="uZP-xH-rrY" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eCo-TA-DP7"/>
+                            <constraint firstItem="OJC-q3-gAE" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gcp-dP-pic"/>
+                            <constraint firstAttribute="trailing" secondItem="uZP-xH-rrY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ipF-u1-9Eu"/>
+                            <constraint firstAttribute="trailing" secondItem="hX5-Rw-N7S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oBw-dT-9jF"/>
+                            <constraint firstItem="ueM-Vz-AXR" firstAttribute="baseline" secondItem="aPY-wh-mEm" secondAttribute="baseline" type="default" id="prH-yL-U8y"/>
+                            <constraint firstItem="wyt-Mz-czx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sqx-0g-xvm"/>
+                            <constraint firstItem="hX5-Rw-N7S" firstAttribute="top" secondItem="3" secondAttribute="top" constant="25" id="uMJ-gh-THl"/>
+                            <constraint firstItem="Nlm-1b-tEj" firstAttribute="top" secondItem="uZP-xH-rrY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xUx-Bz-DeG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="hX5-Rw-N7S" id="qLM-yi-VU9"/>
+                        <outlet property="buttonStart" destination="aPY-wh-mEm" id="fhL-EA-Mrx"/>
+                        <outlet property="buttonStop" destination="ueM-Vz-AXR" id="KEq-Fd-Z62"/>
+                        <outlet property="segmentAccuracy" destination="wyt-Mz-czx" id="2AY-Vu-O6w"/>
+                        <outlet property="textField" destination="uZP-xH-rrY" id="l0E-GH-je1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5" y="63"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
